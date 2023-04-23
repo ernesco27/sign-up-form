@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --valid-color: rgb(34, 253, 34);
+    --error-color: rgb(247, 71, 71);
+    --focus-color: rgb(113, 113, 248);
+}
+
+body{
+    background-color: aquamarine;
+}
+
+#form-container{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 80vw;
+    height: 100vh;
+
+}
+
+.form-div{
+    width: 60%;
+    height: 100vh;
+    background-color: white;
+    /* padding-left: 50px; */
+}
+
+.image-div{
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.input-divs{
+    position: relative;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    padding: 50px 0 20px 50px;
+    margin-top: 30px;
+   
+}
+
+.input-divs > p{
+    position: absolute;
+    top: 10px;
+    font-weight: 600;
+}
+
+input{
+    width: 250px;
+    border-radius: 5px;
+
+}
+
+input:focus {
+    border: 2px solid var(--focus-color);
+    outline: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+label{
+    font-size: 0.5em;
+}
+
+.input-cont{
+    margin-top: -30px;
+}
+
+.form-desc{
+    padding: 20px 0 0 50px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.error{
+    font-size: 0.6rem;
+    margin-top: -30px;
+}
+
+button{
+    width: 130px;
+    height: 30px;
+    background-color: var(--focus-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0 0 50px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    border-style: unset;
+    border: 2px solid var(--focus-color);
+    color: var(--focus-color);
+    
+}
+
+.sign-in{
+    font-size: 0.8rem;
+    margin: 15px 0 0 50px;
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--focus-color);
+}
+
+input[type="password"]:invalid{
+    border: 2px solid var(--error-color);
+}
+
+input[type="password"]:valid {
+    border: 2px solid var(--valid-color);
+}
+
+.error-state{
+    border: 2px solid var(--error-color);
+}

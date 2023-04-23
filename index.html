@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div id="form-container">
+        <div class="image-div">
+            <img src="sf.jpg" alt="a place in japan"  width="500" height="650">
+        </div>
+        <div class="form-div">
+            <form action="https://httpbin.org/post" method="post" onsubmit="return validatePass()">
+                <p class="form-desc">Hello! Travel enthusiasts. Get up to speed on all the amazing <br> places you could spend your vacation at.</p>
+                
+                <div class="input-divs"> 
+                    <p>Let's Do This. Sign Up!</p>
+                    <div>
+                        <label for="first-name">FIRST NAME</label><br>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div>
+                        <label for="last-name">LAST NAME</label><br>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="input-cont">
+                        <label for="mail">E-MAIL</label><br>
+                        <input type="email" id="mail" name="email" required>
+                    </div>
+                    <div class="input-cont">
+                        <label for="phone">PHONE NUMBER</label><br>
+                        <input type="tel" id="phone" name="phone-number" required>
+                    </div>
+                    <div class="input-cont">
+                        <label for="pass">PASSWORD</label><br>
+                        <input type="password" id="pass" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                    </div>
+                    <div class="input-cont">
+                        <label for="pass-conf">CONFIRM PASSWORD</label><br>
+                        <input type="password" id="pass-conf" name="password-conf" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required oninput="validatePass()">
+                    </div>
+                    <div class="error"></div>
+                </div>
+                <button type="submit">Create Account</button>
+                <p class="sign-in">Already have an Account? <a href="#">Sign In</a></p>
+   
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+</html>
