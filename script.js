@@ -5,6 +5,7 @@ const submitBtn = document.querySelector('button');
 
 
 
+
 function validatePass(){
     let pass = password.value;
     let passConf = passwordConf.value;
@@ -15,6 +16,7 @@ function validatePass(){
         
     }else{
         passMismatch.textContent = `Passwords do not match!`;
+        passMismatch.style.color = 'red'
         password.classList.add('error-state');
         return false;
     
@@ -22,4 +24,5 @@ function validatePass(){
 
 }
 
-//submitBtn.addEventListener('click',validatePass);
+
+
